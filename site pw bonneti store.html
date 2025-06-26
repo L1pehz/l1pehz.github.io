@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonetti Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Topbar */
+    .topbar {
+      background-color: #222;
+      color: #4e13b9;
+      padding: 10px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 1.1em;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #111;
+      padding: 16px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar img {
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+    /* Hero Principal */
+    .hero {
+      height: 550px;
+      background: url('https://sneakernews.com/wp-content/uploads/2025/01/nike-air-max-plus-triple-black-dm2362-002-2.jpg?w=1140') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: rgb(255, 255, 255);
+      font-size: 3.5em;
+      margin-bottom: 15px;
+    }
+
+    .hero a {
+      padding: 12px 30px;
+      background-color: #faf5f5;
+      color: #000000;
+      text-decoration: none;
+      margin-top: 15px;
+      border-radius: 5px;
+      font-size: 1.2em;
+      transition: background-color 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #333;
+    }
+
+    /* Carrossel de Marcas */
+    .brand-carousel-container {
+      background-color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .brand-carousel-container h3 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #111;
+    }
+
+    .brand-carousel {
+      overflow-x: auto;
+      white-space: nowrap;
+      display: flex;
+      gap: 30px;
+      justify-content: start;
+      scroll-behavior: smooth;
+    }
+
+    .brand-carousel a {
+      display: inline-block;
+      min-width: 200px;
+      background-color: #f5f5f5;
+      color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .brand-carousel a:hover {
+      transform: scale(1.1);
+      background-color: #eaeaea;
+    }
+
+    /* Hero para Destaques e Carrossel */
+    .highlights-hero {
+      background-color: #f8f8f8;
+      padding: 50px 20px;
+      text-align: center;
+      color: #111;
+    }
+
+    .highlights-hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .highlights-hero p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+
+    /* Descontos e Ofertas */
+    .discounts {
+      background-color: #ffcc00;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .discounts h2 {
+      font-size: 2.8em;
+      margin-bottom: 25px;
+    }
+
+    .discounts .coupon {
+      background-color: #111;
+      color: #fff;
+      font-size: 1.4em;
+      padding: 10px 30px;
+      border-radius: 5px;
+      margin: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .discounts .coupon:hover {
+      background-color: #333;
+    }
+
+    /* História da Loja */
+    .story-hero {
+      background-color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .story-hero h2 {
+      font-size: 2.8em;
+      margin-bottom: 30px;
+      color: #111;
+    }
+
+    .story-hero p {
+      font-size: 1.2em;
+      color: #333;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ccc;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div>
+      <a href="#">Menu</a>
+      <a href="#">Carrinho</a>
+    </div>
+    <div>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">WhatsApp</a>
+      <a href="#">Contato</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="imagens/bonetti.png.png" alt="Logo Bonetti" style="height: 100px;">
+    <div class="nav-links">
+      <a href="#">Início</a>
+      <a href="#Marcas">Marcas</a>
+      <a href="#historia">Nossa História</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+
+  <!-- Hero Principal -->
+  <section class="hero">
+    <h1>Seu Novo Tênis Está Aqui</h1>
+    <a href="#Marcas">Explore Agora</a>
+  </section>
+
+  <!-- Carrossel de Marcas -->
+  <div class="brand-carousel-container" id="marcas">
+    <h3>Marcas Famosas</h3>
+    <div class="brand-carousel">
+      <a href="#">Nike</a>
+      <a href="#">Adidas</a>
+      <a href="#">Puma</a>
+      <a href="#">Vans</a>
+      <a href="#">New Balance</a>
+      <a href="#">Reebok</a>
+      <a href="#">Asics</a>
+      <a href="#">Converse</a>
+    </div>
+  </div>
+
+  <!-- Hero para Destaques -->
+  <section class="highlights-hero">
+    <h2>Destaques da Bonetti Store</h2>
+    <p>Confira os lançamentos exclusivos e as coleções mais procuradas.</p>
+    <a href="#marcas" class="hero-btn">Veja Todos os Destaques</a>
+  </section>
+
+  <!-- Descontos e Ofertas -->
+  <section class="discounts">
+    <h2>Ofertas Especiais e Cupons</h2>
+    <div>
+      <a href="#" class="coupon">10% OFF em toda a loja</a>
+      <a href="#" class="coupon">Compre 2, leve 3 em Sneakers Selecionados</a>
+      <a href="#" class="coupon">Frete Grátis para Compras Acima de R$200</a>
+    </div>
+  </section>
+
+  <!-- História da Bonetti Store -->
+  <section class="story-hero" id="historia">
+    <h2>A História da Bonetti Store</h2>
+    <p>
+      Em 2020, um adolescente apaixonado por tênis decidiu transformar sua paixão em um negócio. Com muito esforço, a Bonetti Store nasceu. No início, as vendas começaram pelas redes sociais, mas a ideia de levar autenticidade e estilo para os jovens foi o que realmente conquistou os clientes. Hoje, a Bonetti Store é uma referência entre os sneakerheads, com uma seleção cuidadosa das melhores marcas.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bonetti Store. Todos os direitos reservados.</p>
+    <p>
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">WhatsApp</a>
+    </p>
+  </footer>
+
+</body>
+</html>
